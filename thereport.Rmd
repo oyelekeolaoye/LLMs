@@ -1,0 +1,145 @@
+---
+title: "Large Language Models in Audit"
+subtitle: An internal report
+author: "Oyeleke Olaoye (oyeleke.olaoye@nao.org.uk)"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+    theme: paper
+    number_sections: no
+  pdf_document:
+    toc: yes
+bibiliography: references.yaml
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Abstract
+
+Large language models (LLMs) and Artificial Intelligence (AI) are finding their way into everyday human life - from marketing, medicine to journalism and beyond. No doubt, this is a new way of working that has come to stay. This brief report aims to demystify a class of language models known as Generative Pre-Trained Transformer (**GPT**) models for audit colleagues, how they relate to our work and how we can make the best out this new development.
+
+# Why should we care?
+
+We have witnessed many technological changes over the past 20 years. From X, Y to Z. This is one of those few advancements that is likely to impact everything. From recruitment processes to our audit processes. The benefits cannot be brushed aside and the risks are also not negligible. The potential labour market implications cannot be overstated. A report *Autonomous* *Next* states that Artificial Intelligence (AI) can reduce 22% of costs in the financial services industry.
+
+## Key selling points of ChatGPT
+
+-   **Versatility** - the user inteface ChatGPT reached one million users in 5 days partly due to the fact that almost everyone in every area of life will find some use for it - from journalism to computer programming and law.
+
+-   **Productivity** - users have reported considerable time-savings by using the chatbot to support their work.
+
+-   **Companionship** - the bot interacts very closely to how a human would respond to questions which has facilitated its wide acceptance
+
+    ![Photo credit: BBC](Images/companion.png)
+
+# How it works?
+
+## A brief history
+
+Just like the breakthrough with airplanes was built on a pile of previous advancements in the field, the success of GPTs was built on much work that has been going on, notably since 1948. However, a proposal in 2017 by some Google researchers was fundamental in the development of this new class of language models. (see paper @Attention is all you need).
+
+Prior to 2017, different approaches to solving language problems suffered from one common thing which is capturing long-range dependencies among many others. For example, giving a language translation task, where the most advanced traditional approach would attempt to take into account all the words into account, the proposal of "**Attention**" by Vaswani et al. mimics the way humans solve language tasks by attending to the most useful words to produce the output.
+
+It is useful to highlight some notable traditional approaches to modelling language prior to the GPTs.
+
+**N-gram models (pre-1948):** these are statistical models that attempt to predict the next word in a sequence based on the previous n-1 words. For example, a trigram model (n=3) predicts the next word based on the two preceding words. These models are still employed, for example in auto-completion programs in mobile phones.
+
+[![Photo credit: Github](Images/ngram1.gif){width="305"}](https://github.com/mmz33/N-Gram-Language-Model)
+
+**Feedforward neural networks:** XXXXXXX
+
+**Word embeddings (gained popularity in early 2010):** The basic idea behind word embeddings in representing words as numbers in a meaningful way. Simple embedding techniques like bag of words used in spam email detection and sentiment analysis, creates a vector of all the tokens in one or multiple inputs with number representing each token's frequency of occurrence in each input.
+
+[![Photo credit: Dataaspirant](Images/3-bag-of-words-representation.jpg)](https://dataaspirant.com/word-embedding-techniques-nlp/#t-1597685144202)
+
+Advanced word embedding models like word2vec and GloVe captures the meaning of words based on context. For example, if you fed enough text to the model, it would learn that the words King and Queen occur in similar contexts and that the difference lie in associated pronouns and similar connotations. Therefore it assigns scores that are close to each other in the vector space but far away from words like car/train.
+
+The concept is captured in the quote attributed to John R. Firth in *"You shall know a word by the company it keeps".*
+
+[![Photo credit: IBM](Images/linear-relationships.png){width="419"}](https://www.ibm.com/blogs/research/2018/11/word-movers-embedding/)
+
+**Recurrent Neural Networks (RNNs):** XXXXXXXX
+
+## **Under the hood of GPTs**
+
+In summary, three (3) key ingredients under-the-hood that contributed to the success of GPTs are
+
+1.  The *Transformer Architecture* which is better at capturing relationships between words and better at parallel processing.
+
+2.  A very large amount of training data.
+
+3.  A substantial investment in humans feedback in tuning the model to interact in the way humans do and incorporating ethical safeguards.
+
+The goal of a GPT is to predict the next token in the sequence. The token can be a word, a pixel, a musical note etc. Like a human has certain properties like height, weight etc. GPTs have captured billions of attributes of different token types. For example, GPT-2 had 1.5 billion parameters.
+
+# Use cases
+
+## General
+
+The application of LLMs are theoretically endless. Here we list some of them based on level impact/risk of things going wrong.
+
+**Low Impact**
+
+-   Anything you do with google (travel planning, job search, real estate)
+
+-   Generating content (news articles, ideas, wedding vows, sermons, essays etc.)
+
+-   Summarising papers
+
+-   Composing music
+
+-   Code assistant
+
+**Medium Impact**
+
+-   Education and research
+
+-   Translation (text-to-text, speech-to-text, signs-to-text)
+
+-   Chatbots
+
+-   Communicating technical concepts to non-technical audiences
+
+**High Impact**
+
+-   Data analysis
+
+-   Legal assistant
+
+-   Medical diagnosis
+
+-   Military and intelligence operations
+
+## In government
+
+The majority of use cases in government we've seen are **chatbots** (Malaysia, Canada, Australia) to answer citizen queries and help people find information. The UK government is using LLMs to classify names in documents (**Named Entity Recognition**), with the goal of making it easy to classify documents of similar content and aid searches. The Japanese government is using a LLM to **simplify** difficult to read official documents for citizens.
+
+## NAO
+
+VFM: Potentially, we can use these models to write report summaries, assist with research, data analysis and visualization, assist with slidepacks for presentation, help write reports in NAO style.
+
+FA: Potentially, we can use these models to assist with research and navigate financial audit guidance
+
+Corporate: XXX
+
+# Risks, concerns and ethical considerations
+
+## Risks & Concerns
+
+## Cases of abuse
+
+## Limitations
+
+# Alternatives - can we build our own?
+
+## Open source vs closed-source
+
+# Recommendations
+
+# Archive
+
+![](Images/Screenshot%202023-05-09%20155402.jpg)
